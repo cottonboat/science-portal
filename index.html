@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="science-portal-style.css">
+</head>
+<body>
+    <header class="main-header" >
+        <h1 style="transform: translateX(-10px);">🪐 Science Portal</h1>
+        <p>Your portal for science resources and quizzes</p>
+    </header>
+ 
+    <main class="container">
+        <!-- Tab Navigation -->
+        <div class="tab-container">
+            <button class="tab-btn active" onclick="openYear(event, 'year-4')">Year 4</button>
+            <button class="tab-btn" onclick="openYear(event, 'year-5')">Year 5</button>
+            <button class="tab-btn" onclick="openYear(event, 'year-6')">Year 6</button>
+            <button class="tab-btn" onclick="openYear(event, 'year-7')">Year 7</button>
+            <button class="tab-btn" onclick="openYear(event, 'year-8')">Year 8</button>
+        </div>
+
+        <!-- Year 4 Content (Active by default) -->
+        <section id="year-4" class="tab-content active">
+            <h2 class="year-title">Year 4 Science</h2>
+
+            <div class="chapter-nav">
+                <button class="ch-btn active" onclick="openChapter('y4-ch1', 'year-4')">Chapter 1</button>
+                <button class="ch-btn" onclick="openChapter('y4-ch2', 'year-4')">Chapter 2</button>
+                <button class="ch-btn" onclick="openChapter('y4-ch3', 'year-4')">Chapter 3</button>
+                <button class="ch-btn" onclick="openChapter('y4-ch4', 'year-4')">Chapter 4</button>
+                <button class="ch-btn" onclick="openChapter('y4-ch5', 'year-4')">Chapter 5</button>
+                <button class="ch-btn" onclick="openChapter('y4-ch6', 'year-4')">Chapter 6</button>
+            </div>
+
+            <div id="y4-ch1" class="chapter-content active">
+                <div class="chapter-card">
+                    <h3>Chapter 1: Living Things</h3>
+                    <p class="chapter-des">Explore the amazing human body. Find out how bones and skeletons help us move, and learn how medicines help keep us healthy.</p>                    
+                    <div class="resource-group">
+                        <h4>📚 Textbooks</h4>
+                        <a href="https://drive.google.com/file/d/1rXrIvnFMGENJuvxw0TjesLu8rROZ8658/view?usp=drivesdk" target="_blank" class="btn btn-book">Download Textbook</a>
+                    </div>
+
+                    <div class="resource-group">
+                        <h4>🎧 Audio Lessons</h4>
+                        <a href="https://notebooklm.google.com/notebook/85d6123e-adc6-41bf-91b0-31154c32eb84/artifact/a8dd6bd5-3456-4185-a6f0-c477aa7a1363" target="_blank" class="btn btn-audio">Audio 01: All about Living Things</a>
+                        <a href="https://notebooklm.google.com/notebook/85d6123e-adc6-41bf-91b0-31154c32eb84/artifact/ed4e18b8-b77d-4e7e-a261-b70359a4e533" target="_blank" class="btn btn-audio">Audio 02: Identification Keys (Classifications)</a>
+                    </div>
+
+                    <div class="resource-group">
+                        <h4>🎬 Video Lessons</h4>
+                        <a href="https://youtu.be/3MN-M4gsDX0?si=WUiEEYPESv6_iPts" target="_blank" class="btn btn-video">Video 01: Skeleton System</a>
+                        <a href="https://youtu.be/OSsntU6sTWI?si=m9tnSCPoe1dKErgu" target="_blank" class="btn btn-video">Video 02: Muscular System</a>
+                        <a href="https://youtu.be/tm-Z0gCWsgI?si=O52SiXgwI1nBflis" target="_blank" class="btn btn-video">Video 03: Animal Classification (Identification Keys)</a>
+                        <a href="https://youtu.be/obn214CE6mY?si=vtfaHAaHGqz2OufT" target="_blank" class="btn btn-video">Video 04: Animals with Bones (Vertebrate)</a>
+                        <a href="https://youtu.be/uIShzXK9Qac?si=yLwmPWFBSIT8X4Gk" target="_blank" class="btn btn-video">Video 05: Animals without Bones (Invertebrate)</a>
+                        <a href="https://youtu.be/1Ztywi4X_34?si=s6wvqlB-LAK284c5" target="_blank" class="btn btn-video">Video 06: Germs and Infectious Diseases</a>
+                        <a href="https://youtu.be/NNxYp3Dvr8s?si=edJkL39qrq5Nwqp4" target="_blank" class="btn btn-video">Video 07: Bacteria and Viruses</a>
+                    </div>
+
+                    <!-- <div class="resource-group">
+                        <h4>📎 Other Materials</h4>
+                        <a href="#" target="_blank" class="btn btn-material">Summary Worksheet</a>
+                        <a href="#" target="_blank" class="btn btn-material">Presentation Slides</a>
+                    </div> -->
+                    
+                    <div class="resource-group quiz-group">
+                        <h4>📝 Quizzes</h4>
+                        <a href="/quiz/y4_ch1_q1" class="btn btn-quiz">Take Quiz 1: Cell Structure</a>
+                    </div>
+
+                    <div class="next-chapter-container">
+                        <button class="btn btn-next" onclick="openChapter('y4-ch2', 'year-4')">Next Chapter: Energy ➡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="y4-ch2" class="chapter-content">
+                <div class="chapter-card">
+                    <h3>Chapter 2: Energy</h3>
+                    <p class="chapter-des">Energy is everywhere! Learn how energy is transferred, how it changes from one form to another, and how it helps living things live and grow.</p>
+                    
+                    <!-- <div class="resource-group">
+                        <h4>🎧 Audio Lessons</h4>
+                        <a href="#" class="btn btn-audio">Audio: Food Chains</a>
+                    </div>
+
+                    <div class="resource-group quiz-group">
+                        <h4>📝 Quizzes</h4>
+                        <a href="/quiz/y4_ch1_q1" class="btn btn-quiz">Take Quiz 1: Cell Structure</a>
+                    </div> -->
+
+                    <div class="next-chapter-container">
+                        <button class="btn btn-next" onclick="openChapter('y4-ch3', 'year-4')">Next Chapter: Materials ➡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="y4-ch3" class="chapter-content">
+                <div class="chapter-card">
+                    <h3>Chapter 3: Materials</h3>
+                    <p class="chapter-des">What are things made of? Discover different materials, how solids and liquids behave, and how materials can change in exciting ways.</p>                   
+
+                    <div class="next-chapter-container">
+                        <button class="btn btn-next" onclick="openChapter('y4-ch4', 'year-4')">Next Chapter: Earth and its habitats ➡</button>
+                    </div>
+                </div>                
+            </div>
+            
+            <div id="y4-ch4" class="chapter-content">
+                <div class="chapter-card">
+                    <h3>Chapter 4: Earth and its habitats</h3>
+                    <p class="chapter-des">What is happening beneath our feet? Discover the structure of the Earth, explore volcanoes and earthquakes, and learn about the different habitats where living things survive.</p>                    
+
+                    <div class="next-chapter-container">
+                        <button class="btn btn-next" onclick="openChapter('y4-ch5', 'year-4')">Next Chapter: Light ➡</button>
+                    </div>
+                </div>                
+            </div> 
+
+            <div id="y4-ch5" class="chapter-content">
+                <div class="chapter-card">
+                    <h3>Chapter 5: Light</h3>
+                    <p class="chapter-des">How do we see the world around us? Explore how light travels and reflects, discover why we have day and night, and investigate the role of light in our solar system.</p>
+                    
+                    <div class="next-chapter-container">
+                        <button class="btn btn-next" onclick="openChapter('y4-ch6', 'year-4')">Next Chapter: Electricity ➡</button>
+                    </div>
+                </div>                
+            </div>
+
+            <div id="y4-ch6" class="chapter-content">
+                <div class="chapter-card">
+                    <h3>Chapter 6: Electricity</h3>
+                    <p class="chapter-des">Become an electricity investigator! Test different materials, discover conductors and insulators, and learn how circuits and switches help electrical devices work.</p>
+                    <p><em>(End of Grade 4 Chapters)</em></p>                    
+                </div>                
+            </div>
+        </section>
+
+        <!-- Year 5 Content -->
+        <section id="year-5" class="tab-content">
+            <h2 class="year-title">Grade 5 Science</h2>
+            <div class="chapter-card">
+                <h3>Chapter 1: </h3>
+                <p>Content for Grade 5 coming soon...</p>
+            </div>
+        </section>
+
+        <!-- Year 6 Content -->
+        <section id="year-6" class="tab-content">
+            <h2 class="year-title">Grade 6 Science</h2>
+            <div class="chapter-card">
+                <h3>Chapter 1: </h3>
+                <p>Content for Grade 6 coming soon...</p>
+            </div>
+        </section>
+
+        <!-- Year 7 Content -->
+        <section id="year-7" class="tab-content">
+            <h2 class="year-title">Grade 7 Science</h2>
+            <div class="chapter-card">
+                <h3>Chapter 1: </h3>
+                <p>Content for Grade 7 coming soon...</p>
+            </div>
+        </section>
+
+        <!-- Year 8 Content -->
+        <section id="year-8" class="tab-content">
+            <h2 class="year-title">Grade 8 Science</h2>
+            <div class="chapter-card">
+                <h3>Chapter 1: </h3>
+                <p>Content for Grade 8 coming soon...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="science-portal-script.js"></script>
+</body>
+</html>
